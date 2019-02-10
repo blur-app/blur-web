@@ -1,8 +1,18 @@
 import React, {Component} from 'react';
+import { Card } from '../basicStyledComponents';
 
 class Post extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+
     render() {
-        return <div>post</div>
+        return (
+          <Card>
+              {this.props.User.username}
+          </Card>
+        );
     }
 }
 
