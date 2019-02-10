@@ -12,6 +12,8 @@ export const Card = styled.div`
     border-radius: 10px;
     width: 100%;
     width: 678px;
+    background-color: #FFFFFF
+
 
     margin: 20px 15px;
     padding: 40px 20px; 
@@ -22,6 +24,6 @@ export const Card = styled.div`
 `;
 
 export const IconButton = styled.img`
-    height: 40px;
+    height: 60px;
     width: auto;
 `;

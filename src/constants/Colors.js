@@ -1,5 +1,7 @@
 export default {
-    primaryStrong: '#E01A4F',
+    primaryStrong: '#FF0042',
+
+    brightText: '#FF0042',
 
     dark: '#363537',
 

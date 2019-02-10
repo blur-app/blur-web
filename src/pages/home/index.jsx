@@ -10,7 +10,7 @@ class Home extends Component {
             posts: [
                 {
                     User: {
-                        username: 'multio',
+                        username: 'Multio',
                         picture: ''
                     },
                     Post: {
@@ -20,7 +20,7 @@ class Home extends Component {
                 },
                 {
                     User: {
-                        username: 'skyler',
+                        username: 'Skyler',
                         picture: ''
                     },
                     Post: {

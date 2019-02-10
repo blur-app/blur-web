@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Colors from '../../constants/Colors';
+
 export const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
@@ -32,7 +33,7 @@ export const SearchBar = styled.input`
     border-color:${Colors.dark}
     width:100%
     outline:none;
-
+    color:${Colors.brightText}
 `;
 
 export const IconGroup = styled.div`
