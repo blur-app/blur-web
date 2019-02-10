@@ -12,7 +12,12 @@ const Header = () => {
             <Link to="/" style={{ textDecoration: 'none' }}>
                 <IconGroup>
                 <BlurTitle>Blur</BlurTitle>
-                <HeaderIcon src="https://image.flaticon.com/icons/svg/133/133755.svg"/>
+              <NavLink
+                to="/"
+                activeStyle={active}
+              >
+                <HeaderIcon src="https://image.flaticon.com/icons/svg/133/133755.svg" to="/"/>
+              </NavLink>
             </IconGroup>
             </Link>
 
@@ -22,20 +27,20 @@ const Header = () => {
             </SearchGroup>
 
             <IconGroup>
-                <NavLink 
+                <NavLink
                     to="/upload"
                     activeStyle={active}
                 >
                     <HeaderIcon src="http://pluspng.com/img-png/free-png-plus-sign-plus-icon-512.png" />
                 </NavLink>
-                <NavLink 
+                <NavLink
                     exact
                     to="/"
                     activeStyle={active}
                 >
                     <HeaderIcon src="https://image.flaticon.com/icons/svg/63/63272.svg"/>
                 </NavLink>
-                <NavLink 
+                <NavLink
                     to="/me"
                     activeStyle={active}
                 >
