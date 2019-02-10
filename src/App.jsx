@@ -23,7 +23,7 @@ class App extends Component {
   initializeApollo() {
     console.warn('here')
     this.client = new ApolloClient({
-      uri: "http://localhost:4000/graphql"
+      uri: "http://api.blur-app.gq:4000/graphql"
     });
 
     this.setState({ready: true})
