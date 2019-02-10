@@ -1,9 +1,23 @@
 import styled from 'styled-components';
+import Colors from '../constants/Colors';
+
 
 export const CenteredContainer = styled.div`
+    margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
+    font-family: 'Open Sans';
+        color: ${Colors.dark};
+
+`;
+
+export const TextContainer = styled.h1`
+    align-items: left;
+    color: ${Colors.dark};
+    font-family: 'Open Sans';
+    margin-left: 30px
 `;
 
 export const Card = styled.div`
@@ -13,7 +27,6 @@ export const Card = styled.div`
     width: 100%;
     width: 678px;
     background-color: #FFFFFF
-
 
     margin: 20px 15px;
     padding: 40px 20px; 

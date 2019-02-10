@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const LongBar = styled.div`
     border-radius: 15px;
     width: 100%;
+    font-family: Open Sans;
     margin: 20px 60px;
     max-width: 678px;
     background: ${props => `linear-gradient(to bottom, ${props.color1}, ${props.color2})`};
@@ -12,6 +13,7 @@ export const LongBar = styled.div`
     :hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
+    
 
     display: flex;
     justify-content: space-between

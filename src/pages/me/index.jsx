@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import Post from '../../components/post';
 import {
     CenteredContainer,
-    IconButton
+    IconButton,
+    TextContainer
 } from '../../components/basicStyledComponents';
 import AccountsManagment from './accountsManagment';
 
@@ -36,7 +37,6 @@ class Me extends Component {
     }
 
 
-
     renderPosts() {
         return this.state.posts.map((item, index) => 
         <Post
@@ -44,17 +44,26 @@ class Me extends Component {
             {...item} 
         />);
     }
+
     render() {
         if(this.props.location.pathname === "/me/accounts") return <AccountsManagment {...this.props}/>
         console.warn(this.props.location);
+
         return (
-            <CenteredContainer>
-                <IconButton 
-                    src="https://cdn0.iconfinder.com/data/icons/cosmo-education/40/326441-pupils-512.png"
-                    onClick={() => this.props.history.push('/me/accounts')}
-                />
+            <div>
+                <TextContainer>
+                    Linked Accounts
+
+                </TextContainer>
+                <CenteredContainer>
+                    <IconButton
+                        src="https://visualpharm.com/assets/998/New%20Window-595b40b65ba036ed117d208a.svg"
+                        onClick={() => this.props.history.push('/me/accounts')}
+                    />
+                    Link another account
+                </CenteredContainer>
                 {this.renderPosts()}
-            </CenteredContainer>
+            </div>
         );
     }
 }
