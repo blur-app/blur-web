@@ -32,7 +32,8 @@ export const ServiceTitle = styled.div`
     margin: 0 20px;
 `;
 
-export const UsernameText = styled.h1`
+export const UsernameText = styled.span`
+font-weight: normal
 
 `;
 

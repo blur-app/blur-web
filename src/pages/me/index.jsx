@@ -3,7 +3,8 @@ import Post from '../../components/post';
 import {
     CenteredContainer,
     IconButton,
-    TextContainer
+    TextContainer,
+    NameContainer
 } from '../../components/basicStyledComponents';
 import AccountsManagment from './accountsManagment';
 import { Query } from 'react-apollo';
@@ -61,17 +62,28 @@ class Me extends Component {
                 console.warn(data)
                 if (!data && !data.getUser) return <div>sad</div>
                 return <span>
+
+                    <TextContainer>
+                        Your Accounts
+                    </TextContainer>
+                    <div style={{marginLeft : 30}}>
                     {data.getUser ? <div>
-                        <UsernameText>{data.getUser.username}</UsernameText>
-                        <UsernameText>{data.getUser.first_name}</UsernameText>
-                        <UsernameText>{data.getUser.last_name}</UsernameText>
+                        <NameContainer>
+                            Username: &nbsp;
+                            <UsernameText>{data.getUser.username}</UsernameText>
+                        </NameContainer>
+                            <br></br>
+                        <NameContainer>
+                            Name: &nbsp;
+                            <UsernameText>{data.getUser.first_name}</UsernameText>
+                        </NameContainer>
+                        &nbsp;
+                        <NameContainer>
+                            <UsernameText>{data.getUser.last_name}</UsernameText>
+                        </NameContainer>
                         </div>
                         : null
                     }
-
-                    <TextContainer>
-                        Linked Accounts
-                    </TextContainer>
                     <CenteredContainer>
                         <IconButton
                             src="https://visualpharm.com/assets/998/New%20Window-595b40b65ba036ed117d208a.svg"
@@ -79,6 +91,7 @@ class Me extends Component {
                         />
                         Link another account
                     </CenteredContainer>
+                    </div>
                     {this.renderPosts()}
                 </span>
             }}
