@@ -4,6 +4,7 @@ import {
     CenteredContainer,
     IconButton
 } from '../../components/basicStyledComponents';
+import AccountsManagment from './accountsManagment';
 
 class Me extends Component {
     constructor(props) {
@@ -44,6 +45,7 @@ class Me extends Component {
         />);
     }
     render() {
+        if(this.props.location.pathname === "/me/accounts") return <AccountsManagment {...this.props}/>
         console.warn(this.props.location);
         return (
             <CenteredContainer>
