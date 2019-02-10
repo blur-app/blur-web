@@ -21,3 +21,8 @@ export const Card = styled.div`
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
 `;
+
+export const IconButton = styled.img`
+    height: 40px;
+    width: auto;
+`;
