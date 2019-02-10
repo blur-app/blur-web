@@ -21,6 +21,14 @@ export const TextContainer = styled.h1`
     margin-left: 30px
 `;
 
+export const NameContainer = styled.span`
+    color:${Colors.dark};
+    font-family: 'Open Sans';
+    font-size:20px
+    font-weight: bold
+    
+`
+
 export const Card = styled.div`
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
