@@ -16,6 +16,7 @@ class Login extends Component {
 
 
     checkData(data) {
+        if (data && data.authUser.user_id) localStorage.setItem('user_id', data.authUser.user_id);
         console.warn('data', data);
     }
 

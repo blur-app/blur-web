@@ -10,6 +10,18 @@ export const getUsers = gql`
     }
 `;
 
+export const getUser = gql`
+    query getUser($user_id: Int!){
+        getUser(user_id: $user_id) {
+            username,
+            first_name,
+            last_name,
+            user_id
+        }
+    }
+`;
+
+
 export const createOauthCreds = gql`
     mutation createOauthCreds($service: String!,$user_id: Int!,$refresh_token: String!,$access_token: String!){
         createOauthCreds(service: $service,user_id: $user_id,refresh_token: $refresh_token,access_token: $access_token)

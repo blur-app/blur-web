@@ -31,3 +31,11 @@ export const ServiceTitle = styled.div`
     color: white;
     margin: 0 20px;
 `;
+
+export const UsernameText = styled.h1`
+
+`;
+
+export const Biography = styled.p`
+    
+`;
