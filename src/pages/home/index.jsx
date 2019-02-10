@@ -29,7 +29,7 @@ class Home extends Component {
             <Query query={getAllPosts}>
                 {({data, loading, error}) => {
 
-                    if(!data && !data.getAllPosts) return <p>sad</p> 
+                    if(!data || !data.getAllPosts) return <p>sad</p> 
                     console.warn(data)
                     return (
                         <CenteredContainer>

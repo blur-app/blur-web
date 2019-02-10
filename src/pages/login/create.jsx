@@ -45,7 +45,7 @@ class Signin extends Component {
                 </InputWrapper>
                 <InputWrapper>
                     <InputLabel>Password</InputLabel>
-                    <Input onChange={this.handleChange} id="password_hash"/>
+                    <Input type="password" onChange={this.handleChange} id="password_hash"/>
                 </InputWrapper>
                 <InputWrapper>
                     <InputLabel>Email</InputLabel>

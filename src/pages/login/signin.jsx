@@ -35,7 +35,7 @@ class Signin extends Component {
                 </InputWrapper>
                 <InputWrapper>
                     <InputLabel>Password</InputLabel>
-                    <Input onChange={this.handleChange} id="password_hash"/>
+                    <Input type="password" onChange={this.handleChange} id="password_hash"/>
                 </InputWrapper>
                 <Submit onClick={this.handleSubmit}>Submit</Submit>
                 <Submit onClick={this.props.swapScreen}>Need an account?</Submit>
