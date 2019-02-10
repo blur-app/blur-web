@@ -10,6 +10,18 @@ export const getUsers = gql`
     }
 `;
 
+
+export const getAllPosts = gql`
+    {
+        getAllPosts {
+            user_id
+            host
+            source
+        }
+    }
+`;
+
+
 export const getUser = gql`
     query getUser($user_id: Int!){
         getUser(user_id: $user_id) {

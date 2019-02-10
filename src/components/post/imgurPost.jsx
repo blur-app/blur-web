@@ -13,7 +13,7 @@ class ImgurPost extends Component {
     }
 
     componentDidMount() {
-        const {source} = this.props.Post;
+        const {source} = this.props;
         axios.get(`https://api.imgur.com/3/gallery/album/${source}`, {headers: {Authorization: 'Client-ID b5a3df24e04e99b'}})
             .then(({data}) => {this.setState({data: data.data, ready:true})});
     }

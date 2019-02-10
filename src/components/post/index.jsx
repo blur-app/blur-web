@@ -10,8 +10,8 @@ class Post extends Component {
     }
 
     renderPostContent() {
-        switch(this.props.Post.host) {
-            case 'imgur':
+        switch(this.props.host) {
+            case 'Imgur':
                 return <ImgurPost {...this.props} />
             default:
                 return <div>Error</div>
@@ -24,7 +24,7 @@ class Post extends Component {
             <PostWrapper>
                 <AuthorWrapper>
                     <IconButton src="panda.svg"/>
-                    <AuthorName>{this.props.User.username}</AuthorName>
+                    <AuthorName>{this.props.user_id}</AuthorName>
                 </AuthorWrapper>
                 <Card>
                    {this.renderPostContent()}

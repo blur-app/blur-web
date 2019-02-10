@@ -26,7 +26,8 @@ export const ImgureTitle = styled.h4`
 `;
 
 export const ImgureImage = styled.img`
-
+    max-width: 450px;
+    max-height: 500px;
 
 `;
 

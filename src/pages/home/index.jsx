@@ -1,41 +1,24 @@
 import React, {Component} from 'react';
 import { CenteredContainer } from '../../components/basicStyledComponents';
 import Post from '../../components/post';
-
+import { Query } from 'react-apollo';
+import {getAllPosts} from '../../graphql';
 
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            posts: [
-                {
-                    User: {
-                        username: 'Multio',
-                        picture: ''
-                    },
-                    Post: {
-                        host: 'imgur',
-                        source: 'qG2fBcG'
-                    }
-                },
-                {
-                    User: {
-                        username: 'Skyler',
-                        picture: ''
-                    },
-                    Post: {
-                        host: 'twitter',
-                        source: 'url'
-                    }
-                }
-            ]
+            
         };
     }
 
 
-    renderPosts() {
-        return this.state.posts.map((item, index) => 
+    renderPosts(data) {
+        console.warn('DATAAAAA', data)
+        if (!data) return null;
+        return data.map((item, index) => 
         <Post
+            key={index}
             {...item} 
         />);
     }
@@ -43,9 +26,18 @@ class Home extends Component {
 
     render() {
         return (
-            <CenteredContainer>
-                {this.renderPosts()}
-            </CenteredContainer>
+            <Query query={getAllPosts}>
+                {({data, loading, error}) => {
+
+                    if(!data && !data.getAllPosts) return <p>sad</p> 
+                    console.warn(data)
+                    return (
+                        <CenteredContainer>
+                            {this.renderPosts(data.getAllPosts)}
+                        </CenteredContainer>
+                    );
+                }}
+            </Query>
         );
     };
 }
