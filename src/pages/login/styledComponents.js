@@ -6,12 +6,10 @@ export const FullPage = styled.div`
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: calc(100vh - 80px);
-    background-color: ${Colors.dark}
 `;
 
 export const BigLogo = styled.img`
-    height: 150px;
+    height: 50px;
     width: auto;
 `;
 
@@ -25,27 +23,36 @@ export const InputWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
+    width: 40%;
+    max-width:400px
     margin: 15px;
 `;
 
 export const Input = styled.input`
     border-radius: 5px;
-    border: 2px solid ${Colors.primaryStrong};
+    border: 2px solid ${Colors.secondaryWeak};
     padding: 10px 15px;
 `;
 
 export const InputLabel = styled.span`
     margin-right: 40px;
-    color: white;
-    font-weight: 500;
+    color: black;
+    font-family: "Open Sans";
+    font-size: 20px
+    font-weight: 'bold';
 `;
 
 export const Submit = styled.span`
     border-radius: 5px;
     padding: 20px 15px;
     margin: 10px;
-    border: 2px solid ${Colors.primaryStrong}
-    color: ${Colors.primaryStrong}
-    background-color: transparent
+    width: 40%
+    max-width:400px
+    text-align:center
+    cursor: pointer
+
+    color: ${Colors.secondaryWeak}
+    background-color: ${Colors.dark}
+    font-family: "Open Sans";
+
 `;
