@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Colors from '../../constants/Colors';
+import { Color } from 'vscode-languageserver';
 export const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
@@ -16,9 +17,16 @@ export const HeaderIcon = styled.img`
 
 export const SearchBar = styled.input`
     background-color:${Colors.dark}
-    border-color:${Colors.dark}
+    border: none;
     width:50%
     borderColor: ${Colors.dark}
+    color: ${Colors.secondaryWeak}
+    padding: 10px;
+    border-bottom: 1px solid ${Color.secondaryWeak}
+    outline: none
+    :focus {
+        border-bottom: 2px solid ${Color.secondaryStrong}
+    }
 `;
 
 export const IconGroup = styled.div`
