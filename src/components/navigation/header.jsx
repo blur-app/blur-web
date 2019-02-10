@@ -16,13 +16,13 @@ const Header = () => {
                 to="/"
                 activeStyle={active}
               >
-                <HeaderIcon src="https://image.flaticon.com/icons/svg/133/133755.svg" to="/"/>
+                <HeaderIcon src="blur.svg" to="/"/>
               </NavLink>
             </IconGroup>
             </Link>
 
             <SearchGroup>
-                <SearchIcon src="https://image.flaticon.com/icons/svg/34/34202.svg"/>
+                <SearchIcon src="magnifying_glass.svg"/>
                 <SearchBar />
             </SearchGroup>
 
@@ -31,20 +31,20 @@ const Header = () => {
                     to="/upload"
                     activeStyle={active}
                 >
-                    <HeaderIcon src="http://pluspng.com/img-png/free-png-plus-sign-plus-icon-512.png" />
+                    <HeaderIcon src="plus.png" />
                 </NavLink>
                 <NavLink
                     exact
                     to="/"
                     activeStyle={active}
                 >
-                    <HeaderIcon src="https://image.flaticon.com/icons/svg/63/63272.svg"/>
+                    <HeaderIcon src="house.svg"/>
                 </NavLink>
                 <NavLink
                     to="/me"
                     activeStyle={active}
                 >
-                    <HeaderIcon src="https://static.thenounproject.com/png/538846-200.png"/>
+                    <HeaderIcon src="user.png"/>
                 </NavLink>
             </IconGroup>
         </HeaderContainer>

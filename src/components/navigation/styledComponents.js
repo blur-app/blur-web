@@ -25,6 +25,7 @@ export const SearchIcon = styled.img`
 export const SearchGroup = styled.div`
     display: flex
     align-items: right
+    font-family: "Open Sans";
     width:90%
 `;
 
