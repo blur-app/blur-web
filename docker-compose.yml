@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  blur:
+    build: ./
+    ports:
+      - "8080:5000"
+    env_file:
+      - docker/list.env
