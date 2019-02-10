@@ -50,7 +50,7 @@ class Me extends Component {
         console.warn(this.props.location);
 
         return (
-            <div>
+            <span>
                 <TextContainer>
                     Linked Accounts
 
@@ -63,7 +63,7 @@ class Me extends Component {
                     Link another account
                 </CenteredContainer>
                 {this.renderPosts()}
-            </div>
+            </span>
         );
     }
 }

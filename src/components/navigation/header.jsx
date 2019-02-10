@@ -9,12 +9,12 @@ const active = {
 const Header = () => {
     return (
         <HeaderContainer>
-
-            <IconGroup>
+            <Link to="/" style={{ textDecoration: 'none' }}>
+                <IconGroup>
                 <BlurTitle>Blur</BlurTitle>
                 <HeaderIcon src="https://image.flaticon.com/icons/svg/133/133755.svg"/>
             </IconGroup>
-
+            </Link>
 
             <SearchGroup>
                 <SearchIcon src="https://image.flaticon.com/icons/svg/34/34202.svg"/>

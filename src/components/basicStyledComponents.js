@@ -9,7 +9,8 @@ export const CenteredContainer = styled.div`
     align-items: center;
     cursor: pointer;
     font-family: 'Open Sans';
-        color: ${Colors.dark};
+    color: ${Colors.dark};
+    width:90%
 
 `;
 

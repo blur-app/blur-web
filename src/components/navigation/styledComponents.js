@@ -33,7 +33,7 @@ export const SearchBar = styled.input`
     border-color:${Colors.dark}
     width:100%
     outline:none;
-    color:${Colors.brightText}
+    color:${Colors.secondaryWeak}
 `;
 
 export const IconGroup = styled.div`
