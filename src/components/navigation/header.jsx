@@ -10,7 +10,6 @@ const Header = () => {
             </IconGroup>
 
 
-
             <SearchGroup>
                 <SearchIcon src="https://image.flaticon.com/icons/svg/34/34202.svg"/>
                 <SearchBar />
