@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Colors from '../../constants/Colors';
+
 export const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
@@ -14,11 +15,24 @@ export const HeaderIcon = styled.img`
     cursor: pointer;
 `;
 
+export const SearchIcon = styled.img`
+    height: 20px;
+    width: auto;
+    padding-left: 30px
+    padding-right: 10px
+`;
+
+export const SearchGroup = styled.div`
+    display: flex
+    align-items: right
+    width:90%
+`;
+
 export const SearchBar = styled.input`
     background-color:${Colors.dark}
     border-color:${Colors.dark}
-    width:50%
-    borderColor: ${Colors.dark}
+    width:100%
+    outline:none;
 `;
 
 export const IconGroup = styled.div`
