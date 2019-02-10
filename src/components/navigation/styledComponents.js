@@ -15,15 +15,20 @@ export const HeaderIcon = styled.img`
 `;
 
 export const SearchBar = styled.input`
-    text-align: center;
+    background-color:${Colors.dark}
+    border-color:${Colors.dark}
+    width:50%
+    borderColor: ${Colors.dark}
 `;
 
 export const IconGroup = styled.div`
     display: flex;
     align-items: center;
+    margin-left: 30px
 `;
 
 export const BlurTitle = styled.h1`
     font-size: 32px;
+    font-family: "Open Sans";
     color: ${Colors.primaryStrong}
 `;
