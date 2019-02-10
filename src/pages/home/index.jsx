@@ -15,7 +15,7 @@ class Home extends Component {
                     },
                     Post: {
                         host: 'imgur',
-                        source: 'url'
+                        source: 'qG2fBcG'
                     }
                 },
                 {
