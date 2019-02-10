@@ -15,3 +15,18 @@ export const createOauthCreds = gql`
         createOauthCreds(service: $service,user_id: $user_id,refresh_token: $refresh_token,access_token: $access_token)
     }
 `;
+
+export const createUser = gql`
+    mutation createUser($username: String!, $password_hash: String!, $first_name: String!, $last_name: String!, $email: String!){
+        createUser(username: $username, password_hash: $password_hash, first_name: $first_name, last_name: $last_name, email: $email)
+    }
+`;
+
+export const authUser = gql`
+    mutation authUser($username: String!, $password_hash: String!){
+        authUser(username: $username, password_hash: $password_hash) {
+            username
+            user_id
+        }
+    }
+`;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import MediaQuery from 'react-responsive';
-import { Home, Profile, Me, Upload } from './pages';
+import { Home, Profile, Me, Upload, Login } from './pages';
 import {Header, Footer} from './components/navigation';
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from 'react-apollo';
@@ -31,6 +31,7 @@ class App extends Component {
 
   render() {
     if (!this.state.ready) return null;
+    const user_id = localStorage.getItem('user_id');
     return (
       <ApolloProvider client={this.client}>
         <BrowserRouter>
@@ -44,6 +45,7 @@ class App extends Component {
               <Route path="/profile" component={Profile} />
               <Route path="/me" component={Me} />
               <Route path="/upload" component={Upload} />
+              <Route path="/login" component={Login} />
             </Switch>
 
             <MediaQuery query="(max-width: 768px)">
