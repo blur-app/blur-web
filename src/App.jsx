@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import MediaQuery from 'react-responsive';
-import { Home, Profile, Me } from './pages';
+import { Home, Profile, Me, Upload } from './pages';
 import {Header, Footer} from './components/navigation';
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from 'react-apollo';
@@ -15,7 +15,7 @@ class App extends Component {
       ready: false
     };
   }
-  
+
   componentDidMount() {
     this.initializeApollo();
   }
@@ -23,7 +23,7 @@ class App extends Component {
   initializeApollo() {
     console.warn('here')
     this.client = new ApolloClient({
-      uri: "http://blur-app.gq:4000/graphql"
+      uri: "http://localhost:4000/graphql"
     });
 
     this.setState({ready: true})
@@ -43,6 +43,7 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route path="/profile" component={Profile} />
               <Route path="/me" component={Me} />
+              <Route path="/upload" component={Upload} />
             </Switch>
 
             <MediaQuery query="(max-width: 768px)">
