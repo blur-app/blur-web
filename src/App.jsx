@@ -3,25 +3,54 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import MediaQuery from 'react-responsive';
 import { Home, Profile, Me } from './pages';
 import {Header, Footer} from './components/navigation';
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from 'react-apollo';
+
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.client = null;
+    this.state ={
+      ready: false
+    };
+  }
+  
+  componentDidMount() {
+    this.initializeApollo();
+  }
+
+  initializeApollo() {
+    console.warn('here')
+    this.client = new ApolloClient({
+      uri: "http://blur-app.gq:4000/graphql"
+    });
+
+    this.setState({ready: true})
+  }
+
   render() {
+    if (!this.state.ready) return null;
     return (
-      <BrowserRouter>
-        <MediaQuery query="(max-width: 1224px)">
-          <Header />
-        </MediaQuery>
+      <ApolloProvider client={this.client}>
+        <BrowserRouter>
+          <div>
+            <MediaQuery query="(min-width: 769px)">
+              <Header />
+            </MediaQuery>
 
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/me" component={Me} />
-        </Switch>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/profile" component={Profile} />
+              <Route path="/me" component={Me} />
+            </Switch>
 
-        <MediaQuery query="(max-width: 1224px)">
-          <Footer />
-        </MediaQuery>
-      </BrowserRouter>
+            <MediaQuery query="(max-width: 768px)">
+              <Footer />
+            </MediaQuery>
+            </div>
+        </BrowserRouter>
+      </ApolloProvider>
     );
   }
 }

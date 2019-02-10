@@ -1,5 +1,10 @@
 import React, {Component} from 'react';
+import gql from "graphql-tag";
+import { Query } from 'react-apollo';
+
+
 import Post from '../../components/post';
+import {getUsers} from '../../graphql';
 import {
     CenteredContainer
 } from '../../components/basicStyledComponents';
@@ -33,8 +38,6 @@ class Profile extends Component {
         };
     }
 
-
-
     renderPosts() {
         return this.state.posts.map((item, index) => 
         <Post
@@ -44,9 +47,18 @@ class Profile extends Component {
     }
     render() {
         return (
-            <CenteredContainer>
-                {this.renderPosts()}
-            </CenteredContainer>
+            <Query query={getUsers}>
+                {({ loading, error, data }) => {
+                    if (loading) return <p>Loading...</p>;
+                    if (error) return <p>Error :(</p>;
+                        console.warn(data)
+                    return (
+                        <CenteredContainer>
+                            {this.renderPosts()}
+                        </CenteredContainer>
+                    );}
+                }                
+            </Query>
         );
     }
 }
