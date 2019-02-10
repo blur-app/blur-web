@@ -38,13 +38,13 @@ const Header = () => {
                     to="/"
                     activeStyle={active}
                 >
-                    <HeaderIcon src="user.png"/>
+                    <HeaderIcon src="house.svg"/>
                 </NavLink>
                 <NavLink
                     to="/me"
                     activeStyle={active}
                 >
-                    <HeaderIcon src="house.svg"/>
+                    <HeaderIcon src="user.png"/>
                 </NavLink>
             </IconGroup>
         </HeaderContainer>

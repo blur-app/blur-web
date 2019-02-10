@@ -27,7 +27,7 @@ class ImgurPost extends Component {
                 <ImgureImage src={images[0].link}/>
                 <RowGroup>
                     <ImgureTitle>{title}</ImgureTitle>
-                    <IconButton src="https://png.pngtree.com/svg/20161205/upvote_25309.png"/>
+                    <IconButton src="thumb.png"/>
                 </RowGroup>
             </div>
         );
