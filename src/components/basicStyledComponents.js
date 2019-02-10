@@ -9,12 +9,11 @@ export const CenteredContainer = styled.div`
 export const Card = styled.div`
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 40%;
     border-radius: 10px;
     width: 100%;
-    max-width: 678px;
+    width: 678px;
 
-    margin: 60px 30px;
+    margin: 20px 15px;
     padding: 40px 20px; 
 
     :hover {

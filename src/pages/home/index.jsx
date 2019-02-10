@@ -14,7 +14,7 @@ class Home extends Component {
                         picture: ''
                     },
                     Post: {
-                        host: 'twitter',
+                        host: 'imgur',
                         source: 'url'
                     }
                 },
